@@ -1,0 +1,6 @@
+.vagrant
+.python-version
+vendor/
+hellomesh*_darwin_*
+hellomesh*_windows_*
+hellomesh*_linux_*

@@ -1,0 +1,4 @@
+FROM golang:1.9
+EXPOSE 8090
+WORKDIR /go/src/github.com/zengyuxing007/hellomesh
+CMD go run src/hellomesh/main.go --conf.file ./examples/docker/hellomesh.yaml

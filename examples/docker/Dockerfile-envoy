@@ -1,0 +1,4 @@
+FROM vifoggy/envoy:1.8
+
+RUN mkdir -p /var/log/envoy
+CMD /usr/local/bin/envoy  -c /etc/envoy.yaml -l trace

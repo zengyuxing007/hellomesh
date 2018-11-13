@@ -22,8 +22,20 @@ func NewServiceCommand() *cobra.Command {
 		Short: "Service related commands",
 	}
 	cmd.AddCommand(newApplyServiceCommand())
+	cmd.AddCommand(showServiceByNameCommand())
 	return cmd
 }
+
+func showServiceByNameCommand() *cobra.Command {
+
+	cmd := &cobra.Command{
+		Use:   "get <servicename>",
+		Short: "get service configuration by servicename",
+		Run:   showService,
+	}
+    return cmd
+}
+
 
 func newApplyServiceCommand() *cobra.Command {
 	cmd := &cobra.Command{
